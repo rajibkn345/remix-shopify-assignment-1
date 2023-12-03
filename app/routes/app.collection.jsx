@@ -41,8 +41,10 @@ function collection() {
       <Text as="h2" alignment="center" variant="headingLg">
         Collections
       </Text>
-      <div ref={button}>
-        <Link onClick={handleOpen}>Add Collection</Link>
+      <div style={{ margin: "20px 10px" }} ref={button}>
+        <Button onClick={handleOpen} tone="success">
+          Add Collection
+        </Button>
       </div>
       <div>
         <Modal

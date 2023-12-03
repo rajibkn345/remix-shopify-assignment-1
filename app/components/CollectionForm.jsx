@@ -18,7 +18,7 @@ import {
 } from "@shopify/polaris";
 import { Form } from "@remix-run/react";
 
-function TodoForm() {
+function TodoForm({ onClose }) {
   return (
     <Card>
       <BlockStack gap="200">
@@ -44,7 +44,16 @@ function TodoForm() {
             </div>
           </div>
 
-          <Button submit>Submit</Button>
+          <Button
+            onClick={() => {
+              setTimeout(() => {
+                onClose();
+              }, 300);
+            }}
+            submit
+          >
+            Submit
+          </Button>
         </Form>
       </BlockStack>
     </Card>
