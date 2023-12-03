@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "remix-app-1"
+client_id = "6e4c5bdfc6d9f0c6d9cf955f09ac6685"
+application_url = "https://sleeve-blades-landscapes-abilities.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/auth/callback",
+  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/auth/shopify/callback",
+  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/api/auth/callback",
+  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "rajib-shop-1.myshopify.com"
