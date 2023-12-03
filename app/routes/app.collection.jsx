@@ -85,7 +85,15 @@ function collection() {
                   >
                     <Button tone="success">edit</Button>
                     <Form method="DELETE">
-                      <Button tone="critical">delete</Button>
+                      <input
+                        type="text"
+                        hidden={true}
+                        name="id"
+                        defaultValue={item.id}
+                      />
+                      <Button submit tone="critical">
+                        delete
+                      </Button>
                     </Form>
                   </td>
                 </tr>
@@ -184,6 +192,9 @@ export async function action({ request }) {
     console.log("data=======", data);
     return null;
   } else if (request.method === "DELETE") {
+    const formData = await request.formData();
+    const delData = Object.fromEntries(formData);
+    console.log(delData, "dell===");
     const response = await admin.graphql(
       `#graphql
         mutation collectionDelete($input: CollectionDeleteInput!) {
@@ -202,7 +213,7 @@ export async function action({ request }) {
       {
         variables: {
           input: {
-            id: "gid://shopify/Collection/1009501285",
+            id: delData.id,
           },
         },
       }
