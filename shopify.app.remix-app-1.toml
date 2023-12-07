@@ -2,7 +2,7 @@
 
 name = "remix-app-1"
 client_id = "6e4c5bdfc6d9f0c6d9cf955f09ac6685"
-application_url = "https://sleeve-blades-landscapes-abilities.trycloudflare.com"
+application_url = "https://membership-belts-publicity-transport.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/auth/callback",
-  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/auth/shopify/callback",
-  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/api/auth/callback",
-  "https://sleeve-blades-landscapes-abilities.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://membership-belts-publicity-transport.trycloudflare.com/auth/callback",
+  "https://membership-belts-publicity-transport.trycloudflare.com/auth/shopify/callback",
+  "https://membership-belts-publicity-transport.trycloudflare.com/api/auth/callback",
+  "https://membership-belts-publicity-transport.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
