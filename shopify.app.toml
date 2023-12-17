@@ -2,7 +2,7 @@
 
 name = "remix-app-1"
 client_id = "2053f512554446b2e245c0da06499e34"
-application_url = "https://earlier-pontiac-grand-topics.trycloudflare.com"
+application_url = "https://trunk-hist-start-columbia.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://earlier-pontiac-grand-topics.trycloudflare.com/auth/callback",
-  "https://earlier-pontiac-grand-topics.trycloudflare.com/auth/shopify/callback",
-  "https://earlier-pontiac-grand-topics.trycloudflare.com/api/auth/callback",
-  "https://earlier-pontiac-grand-topics.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://trunk-hist-start-columbia.trycloudflare.com/auth/callback",
+  "https://trunk-hist-start-columbia.trycloudflare.com/auth/shopify/callback",
+  "https://trunk-hist-start-columbia.trycloudflare.com/api/auth/callback",
+  "https://trunk-hist-start-columbia.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
@@ -25,4 +25,4 @@ embedded = false
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "quickstart-5af2531c.myshopify.com"
+dev_store_url = "rajib-shop-1.myshopify.com"

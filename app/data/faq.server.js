@@ -1,24 +1,24 @@
 import prisma from "../db.server";
 
-export const generateTodo = async (todoObj) => {
+export const generateFAQ = async (todoObj) => {
   try {
-    return await prisma.todo.create({ data: todoObj });
+    return await prisma.faq.create({ data: todoObj });
   } catch (error) {
     throw new Error(error.message);
   }
 };
 
-export const allTodo = async () => {
+export const allFaq = async () => {
   try {
-    return await prisma.todo.findMany();
+    return await prisma.faq.findMany();
   } catch (error) {
     throw new Error(error.message);
   }
 };
 
-export const deleteTodo = async (id) => {
+export const deleteFaq = async (id) => {
   try {
-    return await prisma.todo.delete({
+    return await prisma.faq.delete({
       where: {
         id: parseInt(id), // Assuming id is a string, you may need to convert it to an integer
       },
@@ -28,9 +28,12 @@ export const deleteTodo = async (id) => {
   }
 };
 
-export const updateTodo = async (id, data) => {
+export const updateFaq = async (id, data) => {
   try {
-    return await prisma.todo.update({ select: { id }, data: data });
+    return await prisma.faq.update({
+      where: { id: +id },
+      data: data,
+    });
   } catch (error) {
     throw new Error(error.message);
   }

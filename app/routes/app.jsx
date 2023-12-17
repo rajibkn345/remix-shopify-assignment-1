@@ -14,8 +14,8 @@ export const links = () => [
 ];
 
 export const loader = async ({ request }) => {
-  const checkdata = await authenticate.admin(request);
-  console.log("ch==", checkdata);
+  await authenticate.admin(request);
+  // console.log("applog====", checkdata.admin.rest.params.config.auth);
   return json({ apiKey: process.env.SHOPIFY_API_KEY || "" });
 };
 
@@ -31,6 +31,7 @@ export default function App() {
         <Link to="/app/additional">Additional page</Link>
         <Link to="/app/shop">Shop</Link>
         <Link to="/app/collection">Collection</Link>
+        <Link to="/app/faq">FAQ</Link>
       </ui-nav-menu>
       <Outlet />
     </AppProvider>

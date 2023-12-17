@@ -21,8 +21,9 @@ model Session {
   userId      BigInt?
 }
 
-model Todo {
-  id        Int      @id @default(autoincrement())
-  title     String
-  description String
+model Faq {
+  id       Int    @id @default(autoincrement())
+  question String
+  answer   String
+  group    String
 }

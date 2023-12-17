@@ -4,6 +4,7 @@ import { json } from "@remix-run/node";
 import { authenticate } from "../shopify.server";
 import { useLoaderData } from "@remix-run/react";
 import shopify from "../shopify.server";
+import GoogleFont from "react-google-fonts";
 
 export const loader = async ({ request }) => {
   const { admin } = await authenticate.admin(request);
@@ -28,21 +29,23 @@ function shop() {
   const { data } = useLoaderData();
   console.log("d==", data);
   return (
-    <Card>
-      <Box>
-        <Text variant="headingSm" as="span">
-          Shop Name:{" "}
-        </Text>
-        <Text as="span">{data.shop.name}</Text>
-      </Box>
-      <Divider />
-      <Box>
-        <Text variant="headingSm" as="span">
-          Shop Id:{" "}
-        </Text>
-        <Text as="span">{data.shop.id}</Text>
-      </Box>
-    </Card>
+    <div>
+        <Card>
+          <Box>
+            <Text variant="headingSm" as="span">
+              Shop Name:{" "}
+            </Text>
+            <Text as="span">{data.shop.name}</Text>
+          </Box>
+          <Divider />
+          <Box>
+            <Text variant="headingSm" as="span">
+              Shop Id:{" "}
+            </Text>
+            <Text as="span">{data.shop.id}</Text>
+          </Box>
+        </Card>
+    </div>
   );
 }
 

@@ -18,6 +18,8 @@ export default async function handleRequest(
     ? "onAllReady"
     : "onShellReady";
 
+  console.log("log=====");
+
   return new Promise((resolve, reject) => {
     const { pipe, abort } = renderToPipeableStream(
       <RemixServer
